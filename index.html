@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <link rel="stylesheet" type="text/css" href="mu.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="container">
+            <div class="header-line">
+                <div class="navigation">
+                    <ul>
+                        <li><a href="Головна.html" target="_blank">Головна</a></li>
+                        <li><a href="zone.html" target="_blank">Ігрові зони</a></li>
+                        <li><a href="Про нас.html" target="_blank">Про нас</a></li>
+                        <li><a href="Контакти.html" target="_blank">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+	window.onscroll = function() {
+		scrollFunction()
+	} 
+	function scrollFunction() {
+		let scrollPos = 200;
+		let header = document.getElementById('header')
+		if(document.body.scrollTop > scrollPos || document.documentElement.scrollTop > scrollPos) {
+			header.classlist.add('active');
+		} else {
+			header.classlist.remove('active')
+		}
+	}
+</script>
+    <div class="content">
+        <h1 class="title" onmouseover="showContent('welcome_message')" onmouseout="hideContent()">Ласкаво просимо до нашого комп'ютерного клубу!</h1>
+        <div class="popup" id="welcome_message_popup">
+            <p>Ми засновані у 2077 і з тих пір прагнемо створити найкраще місце для геймерів та комп'ютерних ентузіастів. Наш клуб пропонує сучасне обладнання, комфортні зони для гри та безліч додаткових послуг, щоб ваш досвід був неперевершеним.</p>
+        </div>
+
+        <h2 class="title" onmouseover="showContent('history')" onmouseout="hideContent()">Історія нашого клубу</h2>
+        <div class="popup" id="history_popup">
+            <p>Це почалося з того, що четверо друзів - Богдан, Кирило, Вітя та Андрій - зібралися в кав'ярні. Вони завжди мріяли про власний комп'ютерний клуб.
+                
+            Богдан був фанатом техніки і мріяв про власну ігрову студію. Кирило мав підприємницький дух і бачив у цьому великий потенціал для бізнесу. Вітя був творчою душею і хотів створити особливе місце для геймерів. Андрій був організатором і координатором всіх зусиль.
+                
+            Разом вони працювали над реалізацією мрії, і врешті-решт відкрили свій власний клуб.</p>
+        </div>
+        <br>
+        <br>
+        <h2 class="title" onmouseover="showContent('mission')" onmouseout="hideContent()">Місія та цілі</h2>
+        <div class="popup" id="mission_popup">
+            <p>Наша місія полягає у створенні унікального місця для геймерів, де кожен може знайти щось для себе. Ми прагнемо надавати найкращий сервіс та підтримувати інтерес до комп'ютерних ігор та технологій.</p>
+        </div>
+
+        <h2 class="title" onmouseover="showContent('services')" onmouseout="hideContent()">Наші послуги</h2>
+        <div class="popup" id="services_popup">
+            <p>Ми пропонуємо широкий спектр послуг, включаючи доступ до високопродуктивних ігрових комп'ютерів, консолей останнього покоління, VR-обладнання та багато іншого. Наш клуб також організовує турніри, заходи та навчальні сесії.</p>
+        </div>
+
+        <div class="popup" id="team_popup">
+            <p>Наша команда складається з професіоналів, які захоплюються своєю справою. Ми завжди готові допомогти вам та зробити ваш візит незабутнім.</p>
+        </div>
+
+        <h2 class="title" onmouseover="showContent('partners')" onmouseout="hideContent()">Партнери та спонсори</h2>
+        <div class="popup" id="partners_popup">
+            <p>Ми співпрацюємо з провідними компаніями у сфері комп'ютерних технологій та геймінгу. Наші партнери допомагають нам забезпечити вас найновішим обладнанням та програмним забезпеченням.</p>
+        </div>
+
+        <h2 class="title" onmouseover="showContent('feedback')" onmouseout="hideContent()">Зворотний зв'язок</h2>
+        <div class="popup" id="feedback_popup">
+            <p>Ми завжди відкриті до ваших пропозицій та відгуків. Зв'яжіться з нами за телефоном або через email, і ми з радістю відповімо на всі ваші запитання.</p>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        } 
+        function scrollFunction() {
+            let scrollPos = 200;
+            let header = document.getElementById('header');
+            if(document.body.scrollTop > scrollPos || document.documentElement.scrollTop > scrollPos) {
+                header.classList.add('active');
+            } else {
+                header.classList.remove('active');
+            }
+        }
+
+        function showContent(contentId) {
+            var popup = document.getElementById(contentId + "_popup");
+            popup.style.display = "block";
+        }
+
+        function hideContent() {
+            var popups = document.querySelectorAll('.popup');
+            popups.forEach(function(popup) {
+                popup.style.display = "none";
+            });
+        }
+    </script>
+</body>
+</html>

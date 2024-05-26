@@ -1,0 +1,96 @@
+body {
+    background-image: url(https://img.freepik.com/premium-photo/neon-lights-black-background-red-purple-blue-purple-neon-hd-wallpaper_900321-10092.jpg);
+    background-size: 100%;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+h1, h2{
+    
+    background-color: rgba(41, 41, 109, 0.815);
+    border-radius: 550px  
+}
+* {
+    margin: 0;
+    padding: 0;	
+}
+
+.navigation li {
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navigation {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.header {
+    background-image: linear-gradient(red, orange);
+    width: 100%;
+    position: fixed;
+    transition: all .5s;
+    z-index: 1;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.header.active {
+    background-color: black;
+    padding: 5px 0;
+}
+
+.navigation a {
+    margin-right: 40px;
+    vertical-align: middle;
+    font-family: arial;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a:hover {
+    transition: 1.2s;
+    color: blue;
+}
+
+.title { 
+    color: whitesmoke;
+    font-family: arial;
+    font-size: 34px;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    cursor: pointer;
+    
+}
+.title:hover + .popup {
+    display: block;
+    opacity: 1;
+}
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.popup {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+    text-align: center; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+
+
+.footer {
+    height: 100px; 
+    background-color: rgba(0, 0, 0, 0); 
+}
